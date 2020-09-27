@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.catM.top/"/>
-  <updated>2020-09-24T07:25:12.093Z</updated>
+  <updated>2020-09-27T06:38:21.019Z</updated>
   <id>https://www.catM.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://www.catM.top/2020/09/24/hexo-%E7%9B%B8%E5%85%B3.html"/>
-    <id>https://www.catM.top/2020/09/24/hexo-相关.html</id>
-    <published>2020-09-24T02:48:33.766Z</published>
-    <updated>2020-09-24T07:25:12.093Z</updated>
+    <title>hexo 设置</title>
+    <link href="https://www.catM.top/2020/09/27/hexo-%E8%AE%BE%E7%BD%AE.html"/>
+    <id>https://www.catM.top/2020/09/27/hexo-设置.html</id>
+    <published>2020-09-27T03:34:57.000Z</published>
+    <updated>2020-09-27T06:38:21.019Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,36 @@
     
     </summary>
     
+      <category term="工具" scheme="https://www.catM.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="https://www.catM.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 使用</title>
+    <link href="https://www.catM.top/2020/09/27/hexo%E6%96%87%E6%A1%A3.html"/>
+    <id>https://www.catM.top/2020/09/27/hexo文档.html</id>
+    <published>2020-09-27T01:35:03.000Z</published>
+    <updated>2020-09-27T06:12:53.922Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://www.catM.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="https://www.catM.top/tags/hexo/"/>
     
   </entry>
   
@@ -145,7 +175,7 @@
     <link href="https://www.catM.top/2015/12/01/Oracle-wm-concat%E5%92%8Cpivot%E7%94%A8%E6%B3%95.html"/>
     <id>https://www.catM.top/2015/12/01/Oracle-wm-concat和pivot用法.html</id>
     <published>2015-12-01T08:17:35.000Z</published>
-    <updated>2015-12-02T03:53:07.000Z</updated>
+    <updated>2020-09-27T08:31:15.798Z</updated>
     
     <summary type="html">
     
@@ -199,7 +229,7 @@
     <link href="https://www.catM.top/2015/11/23/Nodejs-%E7%AD%9B%E9%80%89%E6%9C%80%E8%BF%91%E6%97%B6%E9%97%B4%E6%96%87%E4%BB%B6.html"/>
     <id>https://www.catM.top/2015/11/23/Nodejs-筛选最近时间文件.html</id>
     <published>2015-11-23T01:53:13.000Z</published>
-    <updated>2015-11-23T02:51:20.000Z</updated>
+    <updated>2020-09-27T01:45:35.213Z</updated>
     
     <summary type="html">
     

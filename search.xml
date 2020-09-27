@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2020%2F09%2F24%2Fhexo-%E7%9B%B8%E5%85%B3.html</url>
-    <content type="text"><![CDATA[title: hexo的使用date: 2020-09-24 14:29:28categories:”工具”tags: - hexo - 工具记录 标题操作hexo 长时间不用就忘了 做些记录 ，不太全，想起来哪些之后再补充 ，下面这些内容是在有了node 环境和 github 之后才行。这里就不具体说了 1. 新建文章hexo new [layout] “名称” 例如新建了一个文章 名称 “hexo 相关” hexo new “hexo 相关” 命令执行完后，就会在 \source_posts 目录下产生文件了 。打开 title: hexo 相关 date: 2016-01-07 10:26:50 layout: Post categories: Hexo tags: 自己设置 categories 文章分类 ，layout 布局。 \scaffolds 脚手架 文件夹下 可以自己定义 。例如上面Post 布局： layout: title: {{ title }} date: {{ date }} categories: tags: 运行hexo new “名称” 命令后 ，估计就是把 title 和 date 赋值了 。 如果hexo new Post “名称” ,对应的 layout： post 也会 赋值。 可以增加 photos： 图片路径 ，使文章带图片效果。 当然可以自定义其他的 布局 ，只不过在脚手架文件夹中新建文件就可以了 。 2.hexo g 生成静态文件创建的文件是md格式的，hexo 可以根据文件中使用的 categories layout 等设置形成固定的目录和html文件 。/public 目录存放的就是 网站的静态文件。 hexo clean 上面命令是清除public内容 。然后可以用 hexo g 命令重新生成。 3.hexo d 部署到github 要想将文章发布到 github 得有个github账户。申请就不说了 。 建个仓库 ，仓库的名字 ：账户 .github.com ，以后访问就用这个名字访问了 。 github 上传支持 https 和 ssh ，我用的https 每次部署时都输入用户名密码。使用ssh需要生成 公钥和私钥，并放到对应的位置，公钥弄到github上。然后每次部署就不要用户名密码了。 4.hexo s 启动本地服务hexo 支持本地访问，默认端口 4000 E:\github\hexo\quanshui111&gt;hexo s INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop. 如果没问题，使用http://localhost:4000/ 直接可以看到你编辑的内容了 。 5.hexo 安装 和 初始化hexo 安装的时候 用npm 安装 npm install -g hexo npm install hexo-server --save npm install hexo-renderer-ejs --save npm install hexo-renderer-stylus --save npm install hexo-renderer-marked --save 这些看情况安装 。 hexo init &lt;文件夹&gt; 上面命令会初始化hexo 目录。是工作的目录，如下： scaffolds 脚手架，也就是一个工具模板 scripts 写文件的js，扩展hexo的功能 source 存放博客正文内容 source/_drafts 草稿箱 source/_posts 文件箱 themes 存放皮肤的目录 themes/landscape 默认的皮肤 _config.yml 全局的配置文件 db.json 静态常量 6._config.yml全局配置文件下面列出部分修改： # Sitetitle: logo的标题文本author: 作者 # URLurl: http://quanshui111.github.io/ 访问路径 # Extensionstheme: pacman主题 # Deployment github部署的位置和分支deploy: type: git repository: 上传到github的地址 branch: master 7.主题_config.yml的一些配置我使用的 pacman 主题 ,下面列下主要的修改 ： 设置主页菜单的内容menu: 主页: / 归档: /archives 简介: /about logo图片 以及fav 图标imglogo: enable: true src: img/logo.jpgfavicon: img/favicon.jpg 作者图片 在footer 部分author_img: img/author.jpg 作者签名 在footer部分intro_line1: “不作死就不会死。”intro_line2: “no zuo no die.” 加多说评论系统下面short_name 也就是你的二级域名，即http://aaa.duoshuo.com 去掉.duoshuo.com前面的部分duoshuo: enable: true short_name: aaa 源文件]]></content>
+    <title><![CDATA[hexo 设置]]></title>
+    <url>%2F2020%2F09%2F27%2Fhexo-%E8%AE%BE%E7%BD%AE.html</url>
+    <content type="text"><![CDATA[1文章显示图片 文章发布之后，图片不显示 需要设置下 安装个插件 1$ cnpm install hexo-asset-image --save 改下主站设置 _config.yml 1post_asset_folder: false 改成 ture 重新生成 启动 源文件目录]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo 使用]]></title>
+    <url>%2F2020%2F09%2F27%2Fhexo%E6%96%87%E6%A1%A3.html</url>
+    <content type="text"><![CDATA[安装node和npm node 下载地址 1https://nodejs.org/en/ 用12.18.4 的吧 ，14 版本的发布github 时报错。 node npm（包管理器） C:\Users\Administrator&gt;node -vv12.18.4 C:\Users\Administrator&gt;npm -v6.14.6 node_global 和 node_cache 新建两个文件夹 ，存放全局安装的插件 （全局安装包 默认安装到 c盘 ） ； npm config set prefix “D:\nodejs\node_global” npm config set cache “D:\nodejs\node_cache” 另外，将全局安装包位置设置成系统环境变量，方便使用全局安装的包； 全局安装了hexo 和 cnpm ；这样命令行 可以直接使用 hexo 和 cnpm 命令了 安装cnpm命令 1npm install -g cnpm --registry=https://registry.npm.taobao.org cnpm 安装与否 跟hexo 没有关系 ，只是下载包会快； ，淘宝出品 安装完了，以后用cnpm安装其他 包,查看下版本信息 cnpm -vcnpm@6.1.1 (D:\nodejs\node_global\node_modules\cnpm\lib\parse_argv.js)npm@6.14.8 (D:\nodejs\node_global\node_modules\cnpm\node_modules\npm\lib\npm.js)node@14.11.0 (D:\nodejs\node.exe)npminstall@3.27.0 (D:\nodejs\node_global\node_modules\cnpm\node_modules\npminstall\lib\index.js)prefix=D:\nodejs\node_globalwin32 x64 10.0.18363registry=https://r.npm.taobao.org 安装hexo cnpm install -g hexo-cli 使用hexo初始化博客 建个空文件夹 blog hexo init 初始化一个博客 ，自动下载依赖和主题； 启动博客hexo clean 清除 hexo g 生成静态文件 hexo s 启动 安装git下载地址 1https://git-scm.com/download/win 查看版本 C:\Users\Administrator&gt;git –versiongit version 2.28.0.windows.1 配置用户信息 git config – global user.name ‘用户名’ git config – global user.email ‘邮箱’ 注意： git config –global 参数，有了这个参数表示你这台机器上所有的git仓库都会使用这个配置 安装hexo-deployer-git 发布到github 1cnpm install --save hexo-deployer-git 有 –save 参数才会把模块写入到 packages.json github仓库博客创建完之后，需要发布到github 上 ，得有个仓库。 注 ： github 上的仓库必须 是 你的登录昵称 (quanshui111) 加github.io 生成ssh通讯公钥 - 用于本地电脑 和 github 或者gitee 远程链接 命令： 1ssh-keygen -t rsa -C “quanshui0312@qq.com” 打开pub 文件，复制内容到 github 测试 1$ ssh -T git@github.com The authenticity of host ‘github.com (52.74.223.119)’ can’t be established.RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.Are you sure you want to continue connecting (yes/no/[fingerprint])? yesWarning: Permanently added ‘github.com,52.74.223.119’ (RSA) to the list of known hosts.Hi quanshui111! You’ve successfully authenticated, but GitHub does not provide shell access. hexo设置github远程仓库主站_config.yml 文件中修改 1234deploy: type: git repository: https://github.com/quanshui111/quanshui111.github.io branch: master 发布到github1hexo d 需要输入 github 的用户名 ，密码；第一次发布需要，再次发布 由于已经设置ssh 密钥，不用密码登录了； 主题 https://github.com/litten/hexo-theme-yilia 目录说明scaffolds 脚手架，也就是一个工具模板scripts 写文件的js，扩展hexo的功能source 存放博客正文内容source/_drafts 草稿箱source/_posts 文件箱themes 存放皮肤的目录themes/landscape 默认的皮肤_config.yml 全局的配置文件db.json 静态常量 新建文章 hexo new “hexo 相关” 命令执行完后，就会在 \source\_posts 目录下产生文件了]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Jquery跨域访问]]></title>
