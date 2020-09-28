@@ -173,6 +173,12 @@
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="1文章显示图片"><a href="#1文章显示图片" class="headerlink" title="1文章显示图片"></a>1文章显示图片</h1><p> 文章发布之后，图片不显示 需要设置下 </p>
@@ -271,6 +277,12 @@
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="安装node和npm"><a href="#安装node和npm" class="headerlink" title="安装node和npm"></a>安装node和npm</h2><ul>
@@ -326,57 +338,9 @@
 <h2 id="启动博客"><a href="#启动博客" class="headerlink" title="启动博客"></a>启动博客</h2><p>hexo clean  清除 </p>
 <p> hexo g   生成静态文件</p>
 <p> hexo s   启动</p>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>下载地址  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://git-scm.com/download/win</span><br></pre></td></tr></table></figure>
-<p>查看版本</p>
-<blockquote>
-<p>C:\Users\Administrator&gt;git –version<br>git version 2.28.0.windows.1</p>
-</blockquote>
-<p>配置用户信息</p>
-<blockquote>
-<p>git  config – global  user.name  ‘用户名’</p>
-<p>git  config – global  user.email  ‘邮箱’</p>
-</blockquote>
-<p>  注意：  git  config –global 参数，有了这个参数表示你这台机器上所有的git仓库都会使用这个配置  </p>
-<h2 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h2><p> 发布到github </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>有 –save 参数才会把模块写入到 packages.json</p>
-</blockquote>
-<h2 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h2><p>博客创建完之后，需要发布到github 上 ，得有个仓库。</p>
-<p><strong><font color="red">注 ： github 上的仓库必须 是 你的登录昵称 (quanshui111) 加github.io</font></strong></p>
-<ul>
-<li><p>生成ssh通讯公钥 -  用于本地电脑 和 github 或者gitee 远程链接</p>
-<p>命令：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “quanshui0312@qq.com”</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/09/27/hexo文档/image-20200925104527973.png" alt="image-20200925104527973"></p>
-<p>打开pub 文件，复制内容到 github  </p>
-</li>
-</ul>
-<p><img src="/2020/09/27/hexo文档/image-20200925104435964.png" alt="image-20200925104435964"></p>
-<ul>
-<li><p>测试</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>The authenticity of host ‘github.com (52.74.223.119)’ can’t be established.<br>RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.<br>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes<br>Warning: Permanently added ‘github.com,52.74.223.119’ (RSA) to the list of known hosts.<br>Hi quanshui111! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="hexo设置github远程仓库"><a href="#hexo设置github远程仓库" class="headerlink" title="hexo设置github远程仓库"></a>hexo设置github远程仓库</h2><p>主站_config.yml 文件中修改</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/quanshui111/quanshui111.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h2 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>需要输入 github 的用户名 ，密码；第一次发布需要，再次发布 由于已经设置ssh 密钥，不用密码登录了；</p>
-</blockquote>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><blockquote>
-<p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p>
-</blockquote>
-<h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
-<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><blockquote>
-<p>hexo  new “hexo 相关”</p>
-</blockquote>
-<p>  命令执行完后，就会在 \source\_posts 目录下产生文件了  </p>
-
+        
+          <a class="article-more-a" href="/2020/09/27/hexo文档.html#more">more >></a>
+        
       
 
       
@@ -458,6 +422,12 @@
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <p>为了简便 ，再集群应用下某个页面 ，点击一次，触发集群下所有节点的功能（servlet实现），根据配置文件的不同，使每个节点读取不同的配置项，处理不同的数据。</p>
@@ -595,6 +565,12 @@
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>Oracle 中dbms_xmlgen 包可以实现关系表 转换成xml。</strong></p>
@@ -784,6 +760,12 @@ from dm_sjhd
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="操作hexo-长时间不用就忘了-做些记录-，不太全，想起来哪些之后再补充-，下面这些内容是在有了node-环境和-github-之后才行。这里就不具体说了"><a href="#操作hexo-长时间不用就忘了-做些记录-，不太全，想起来哪些之后再补充-，下面这些内容是在有了node-环境和-github-之后才行。这里就不具体说了" class="headerlink" title="操作hexo 长时间不用就忘了 做些记录 ，不太全，想起来哪些之后再补充 ，下面这些内容是在有了node 环境和 github 之后才行。这里就不具体说了"></a>操作hexo 长时间不用就忘了 做些记录 ，不太全，想起来哪些之后再补充 ，下面这些内容是在有了node 环境和 github 之后才行。这里就不具体说了</h3><h4 id="1-新建文章-hexo-new-layout-“名称”-例如新建了一个文章-名称-“hexo-相关”"><a href="#1-新建文章-hexo-new-layout-“名称”-例如新建了一个文章-名称-“hexo-相关”" class="headerlink" title="1. 新建文章 hexo new [layout] “名称” 例如新建了一个文章 名称  “hexo 相关”"></a>1. 新建文章 hexo new [layout] “名称” 例如新建了一个文章 名称  “hexo 相关”</h4><blockquote>
@@ -929,6 +911,12 @@ db.json 静态常量
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
@@ -1040,6 +1028,12 @@ VALUE       表示统计项相关的值
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="函数wm-concat"><a href="#函数wm-concat" class="headerlink" title="函数wm_concat"></a>函数wm_concat</h3><blockquote>
@@ -1172,6 +1166,12 @@ from (select   name, nums from demo) pivot( count(1)   for name in(&apos;苹果&
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Oracle-Scn-描述"><a href="#Oracle-Scn-描述" class="headerlink" title="Oracle Scn 描述"></a>Oracle Scn 描述</h2><p>Oracle数据库内部的一种逻辑时间戳，通过SCN将数据库内的事件理清次序， 这是保证事务属性ACID的必要信息。</p>
@@ -1288,6 +1288,12 @@ from (select   name, nums from demo) pivot( count(1)   for name in(&apos;苹果&
         
       </header>
     
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <p>将修改的文件从项目中提取出来生成升级包文件 。自己测试使用</p>
@@ -1539,15 +1545,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">oracle</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Scn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
               </li>
              
               <li class="article-tag-list-item">

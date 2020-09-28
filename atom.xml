@@ -47,17 +47,63 @@
     <link href="https://www.catM.top/2020/09/27/hexo%E6%96%87%E6%A1%A3.html"/>
     <id>https://www.catM.top/2020/09/27/hexo文档.html</id>
     <published>2020-09-27T01:35:03.000Z</published>
-    <updated>2020-09-27T06:12:53.922Z</updated>
+    <updated>2020-09-27T09:30:00.147Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h2 id=&quot;安装node和npm&quot;&gt;&lt;a href=&quot;#安装node和npm&quot; class=&quot;headerlink&quot; title=&quot;安装node和npm&quot;&gt;&lt;/a&gt;安装node和npm&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;node 下载地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https://nodejs.org/en/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用12.18.4 的吧 ，14 版本的发布github 时报错。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;node  npm（包管理器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;C:\Users\Administrator&amp;gt;node -v&lt;br&gt;v12.18.4&lt;/p&gt;
+&lt;p&gt;C:\Users\Administrator&amp;gt;npm -v&lt;br&gt;6.14.6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;node_global&lt;/strong&gt; 和 &lt;strong&gt;node_cache&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新建两个文件夹 ，存放全局安装的插件 （全局安装包  默认安装到 c盘  ） ； &lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;npm config set prefix “D:\nodejs\node_global”&lt;/p&gt;
+&lt;p&gt;npm config set cache “D:\nodejs\node_cache”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;另外，将全局安装包位置设置成系统环境变量，方便使用全局安装的包；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/09/27/hexo文档/image-20200924181104370.png&quot; alt=&quot;image-20200924181104370&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  全局安装了hexo  和  cnpm  ；这样命令行 可以直接使用 hexo  和 cnpm 命令了 &lt;/p&gt;
+&lt;p&gt;  &lt;img src=&quot;/2020/09/27/hexo文档/image-20200924180732371.png&quot; alt=&quot;image-20200924180732371&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装cnpm&quot;&gt;&lt;a href=&quot;#安装cnpm&quot; class=&quot;headerlink&quot; title=&quot;安装cnpm&quot;&gt;&lt;/a&gt;安装cnpm&lt;/h2&gt;&lt;p&gt;命令&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g cnpm --registry=https://registry.npm.taobao.org&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cnpm 安装与否 跟hexo  没有关系  ，只是下载包会快；  ，淘宝出品&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装完了，以后用cnpm安装其他 包,查看下版本信息&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cnpm -v&lt;br&gt;&lt;a href=&quot;mailto:cnpm@6.1.1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cnpm@6.1.1&lt;/a&gt; (D:\nodejs\node_global\node_modules\cnpm\lib\parse_argv.js)&lt;br&gt;&lt;a href=&quot;mailto:npm@6.14.8&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;npm@6.14.8&lt;/a&gt; (D:\nodejs\node_global\node_modules\cnpm\node_modules\npm\lib\npm.js)&lt;br&gt;&lt;a href=&quot;mailto:node@14.11.0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;node@14.11.0&lt;/a&gt; (D:\nodejs\node.exe)&lt;br&gt;&lt;a href=&quot;mailto:npminstall@3.27.0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;npminstall@3.27.0&lt;/a&gt; (D:\nodejs\node_global\node_modules\cnpm\node_modules\npminstall\lib\index.js)&lt;br&gt;prefix=D:\nodejs\node_global&lt;br&gt;win32 x64 10.0.18363&lt;br&gt;registry=&lt;a href=&quot;https://r.npm.taobao.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://r.npm.taobao.org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;cnpm install -g hexo-cli&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;使用hexo初始化博客&quot;&gt;&lt;a href=&quot;#使用hexo初始化博客&quot; class=&quot;headerlink&quot; title=&quot;使用hexo初始化博客&quot;&gt;&lt;/a&gt;使用hexo初始化博客&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;建个空文件夹 blog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;hexo init  &lt;/p&gt;
+&lt;p&gt;初始化一个博客  ，自动下载依赖和主题；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;启动博客&quot;&gt;&lt;a href=&quot;#启动博客&quot; class=&quot;headerlink&quot; title=&quot;启动博客&quot;&gt;&lt;/a&gt;启动博客&lt;/h2&gt;&lt;p&gt;hexo clean  清除 &lt;/p&gt;
+&lt;p&gt; hexo g   生成静态文件&lt;/p&gt;
+&lt;p&gt; hexo s   启动&lt;/p&gt;
     
     </summary>
     
