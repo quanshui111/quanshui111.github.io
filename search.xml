@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[文字识别Ocr]]></title>
+    <url>%2F2020%2F10%2F14%2F%E6%96%87%E5%AD%97%E8%AF%86%E5%88%ABOcr.html</url>
+    <content type="text"><![CDATA[基本上使用 腾讯 百度 阿里 这几家 腾讯腾讯AI开放平台 地址1https://ai.qq.com/product/visionimgidy.shtml#fuzzy 注册并创建应用 输入些注册信息 最后得到一个AppID 和Apikey. 给应用添加接入功能选择能力库 ，再里边进行选择给应用加入的功能； 选择加入的应用 ； 首页就可以看到接入的能力了 。具体怎么用 查看文档 ； 好像缺少票据的识别， 没找到 。 百度开放平台地址1https://ai.baidu.com/ 能力接入 看着挺多。 增值税发票收费情况 登陆 接口使用概述 创建应用 文字识别 里边的是默认勾选的。 完成之后 得到 appid ，apikey ，跟腾讯一样 调用 随便找一张发票图片 ； 复制官网代码 1234567891011121314151617181920212223242526 public static String vatInvoice() &#123; // 请求url String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/vat_invoice"; try &#123; // 本地文件路径 String filePath = "D:/Downloads/1.png"; byte[] imgData = FileUtil.readFileByBytes(filePath); String imgStr = Base64Util.encode(imgData); String imgParam = URLEncoder.encode(imgStr, "UTF-8"); String param = "image=" + imgParam; String accessToken = AuthService.getAuth(); String result = HttpUtil.post(url, accessToken, param); System.out.println(result); return result; &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; return null; &#125;public static void main(String[] args) &#123; OcrTest.vatInvoice();&#125; 运行结果 API和SDK文档访问地址 https://cloud.baidu.com/doc/OCR/s/Ek3h7xypm 可以自行查看如何调用。 如图： 阿里OCR 市场 https://market.aliyun.com/aliyunocrnew 发票相关 调用API https://market.aliyun.com/products/57124001/cmapi027758.html?spm=5176.182739.954606.1.69111d8aDU5qtS#sku=yuncode2175800000 总结基本上使用ocr 都差不多。 有以下步骤 注册账号 注册应用 下载sdk 按实例代码调用]]></content>
+      <tags>
+        <tag>ocr 文字识别</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[安装]]></title>
     <url>%2F2020%2F09%2F30%2Fchorme%E5%AE%89%E8%A3%85.html</url>
     <content type="text"><![CDATA[chrome 同步 点开 ，管理你的同步数据 可以自定义同步内容 ，或者默认 同步全部； crx4 站点 chrome 插件 获取地址 ： https://www.crx4chrome.com/ 可以进到里边搜索 。谷歌访问助手和谷歌上网助手 安装crx插件从上面地址 下载到 插件后 。打开chrome 扩展程序 或者直接输入这个： 吧crx 插件拖进去就可以了 安装了 ； 有些插件提示 要通过 应用商店安装，那就从应用店 装就可以了。 但是首先得能访问谷歌站点才行 。 谷歌访问助手和谷歌上网助手 访问google,gmail 等google站点 同步个人数据 有时候访问助手 不能用，就用上网助手 （需要登录 ） 解决不同步 的问题参考文章 ： 1https://www.zhihu.com/question/20434889 新电脑安装 chrome ，登录后 ，不同步，或者同步的内容是以前的。说明chorme已经很久 没有往服务器同步数据库了； 访问不了同步服务器了； 查看host 文件 之前设置过很多xxx.google.com 相关的 映射。 删除。否则影响同步。 查看同步服务器信息 1chrome://sync-internals/ 输入上面地址，会列出来 同步服务器状态 ；]]></content>

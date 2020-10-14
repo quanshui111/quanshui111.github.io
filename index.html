@@ -159,6 +159,154 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-文字识别Ocr" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/14/文字识别Ocr.html">文字识别Ocr</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/14/文字识别Ocr.html" class="archive-article-date">
+  	<time datetime="2020-10-14T08:10:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-14</time>
+</a>
+        
+<!--卜算子统计阅读量-->
+	
+      </header>
+    
+ 
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基本上使用 腾讯  百度 阿里 这几家</p>
+<h2 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h2><h3 id="腾讯AI开放平台-地址"><a href="#腾讯AI开放平台-地址" class="headerlink" title="腾讯AI开放平台 地址"></a>腾讯AI开放平台 地址</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ai.qq.com/product/visionimgidy.shtml#fuzzy</span><br></pre></td></tr></table></figure>
+<h3 id="注册并创建应用"><a href="#注册并创建应用" class="headerlink" title="注册并创建应用"></a>注册并创建应用</h3><p>  输入些注册信息 最后得到一个AppID 和Apikey.</p>
+<h3 id="给应用添加接入功能"><a href="#给应用添加接入功能" class="headerlink" title="给应用添加接入功能"></a>给应用添加接入功能</h3><p>选择能力库 ，再里边进行选择给应用加入的功能；</p>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201012112416916.png" alt="image-20201012112416916"></p>
+<p>选择加入的应用 ；</p>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201012112511944.png" alt="image-20201012112511944"></p>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201012112541440.png" alt="image-20201012112541440"></p>
+<p>首页就可以看到接入的能力了 。具体怎么用  查看文档 ；</p>
+<blockquote>
+<p>好像缺少票据的识别， 没找到 。</p>
+</blockquote>
+<h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><h3 id="开放平台地址"><a href="#开放平台地址" class="headerlink" title="开放平台地址"></a>开放平台地址</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ai.baidu.com/</span><br></pre></td></tr></table></figure>
+<h3 id="能力接入"><a href="#能力接入" class="headerlink" title="能力接入"></a>能力接入</h3><p>  看着挺多。</p>
+<ul>
+<li><img src="/2020/10/14/文字识别Ocr/image-20201012113524528.png" alt="image-20201012113524528"></li>
+</ul>
+<p>增值税发票收费情况</p>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201012114614582.png" alt="image-20201012114614582"></p>
+<h3 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h3><p><img src="/2020/10/14/文字识别Ocr/image-20201014105058337.png" alt="image-20201014105058337"></p>
+<h3 id="接口使用概述"><a href="#接口使用概述" class="headerlink" title="接口使用概述"></a>接口使用概述</h3><p><img src="/2020/10/14/文字识别Ocr/image-20201014113745658.png" alt="image-20201014113745658"></p>
+<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><font color="red">      文字识别  里边的是默认勾选的。</font>
+
+<p><img src="/2020/10/14/文字识别Ocr/image-20201014150011260.png" alt="image-20201014150011260"></p>
+<ul>
+<li>完成之后 得到 appid ，apikey  ，跟腾讯一样</li>
+</ul>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201014150212219.png" alt="image-20201014150212219"></p>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><ul>
+<li>随便找一张发票图片 ； </li>
+</ul>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201014155029107.png" alt="image-20201014155029107"></p>
+<ul>
+<li>复制官网代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">vatInvoice</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">// 请求url</span></span><br><span class="line">       String url = <span class="string">"https://aip.baidubce.com/rest/2.0/ocr/v1/vat_invoice"</span>;</span><br><span class="line">       <span class="keyword">try</span> &#123;</span><br><span class="line">           <span class="comment">// 本地文件路径</span></span><br><span class="line">           String filePath = <span class="string">"D:/Downloads/1.png"</span>;</span><br><span class="line">           <span class="keyword">byte</span>[] imgData = FileUtil.readFileByBytes(filePath);</span><br><span class="line">           String imgStr = Base64Util.encode(imgData);</span><br><span class="line">           String imgParam = URLEncoder.encode(imgStr, <span class="string">"UTF-8"</span>);</span><br><span class="line"></span><br><span class="line">           String param = <span class="string">"image="</span> + imgParam;</span><br><span class="line"></span><br><span class="line">           String accessToken =  AuthService.getAuth();</span><br><span class="line"></span><br><span class="line">           String result = HttpUtil.post(url, accessToken, param);</span><br><span class="line">           System.out.println(result);</span><br><span class="line">           <span class="keyword">return</span> result;</span><br><span class="line">       &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    OcrTest.vatInvoice();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行结果</li>
+</ul>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201014155121924.png" alt="image-20201014155121924"></p>
+<h3 id="API和SDK文档"><a href="#API和SDK文档" class="headerlink" title="API和SDK文档"></a>API和SDK文档</h3><p>访问地址</p>
+<blockquote>
+<p><a href="https://cloud.baidu.com/doc/OCR/s/Ek3h7xypm" target="_blank" rel="noopener">https://cloud.baidu.com/doc/OCR/s/Ek3h7xypm</a></p>
+</blockquote>
+<p>可以自行查看如何调用。</p>
+<p>如图：</p>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201014114121313.png" alt="image-20201014114121313"></p>
+<h2 id="阿里"><a href="#阿里" class="headerlink" title="阿里"></a>阿里</h2><h3 id="OCR-市场"><a href="#OCR-市场" class="headerlink" title="OCR 市场"></a>OCR 市场</h3><blockquote>
+<p><a href="https://market.aliyun.com/aliyunocrnew" target="_blank" rel="noopener">https://market.aliyun.com/aliyunocrnew</a></p>
+</blockquote>
+<h3 id="发票相关"><a href="#发票相关" class="headerlink" title="发票相关"></a>发票相关</h3><p><img src="/2020/10/14/文字识别Ocr/image-20201014142227447.png" alt="image-20201014142227447"></p>
+<h3 id="调用API"><a href="#调用API" class="headerlink" title="调用API"></a>调用API</h3><blockquote>
+<p><a href="https://market.aliyun.com/products/57124001/cmapi027758.html?spm=5176.182739.954606.1.69111d8aDU5qtS#sku=yuncode2175800000" target="_blank" rel="noopener">https://market.aliyun.com/products/57124001/cmapi027758.html?spm=5176.182739.954606.1.69111d8aDU5qtS#sku=yuncode2175800000</a></p>
+</blockquote>
+<p><img src="/2020/10/14/文字识别Ocr/image-20201014143826429.png" alt="image-20201014143826429"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>基本上使用ocr 都差不多。 有以下步骤</p>
+<ul>
+<li><p>注册账号</p>
+</li>
+<li><p>注册应用</p>
+</li>
+<li><p>下载sdk</p>
+</li>
+<li><p>按实例代码调用</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ocr 文字识别</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/14/文字识别Ocr.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="chrome-chorme安装" class="article article-type-chrome  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1421,126 +1569,6 @@ db.json 静态常量
 
 
   
-    <article id="post-Oracle-统计信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/07/Oracle-统计信息.html">Oracle 统计信息</a>
-    </h1>
-  
-
-        
-        <a href="/2016/01/07/Oracle-统计信息.html" class="archive-article-date">
-  	<time datetime="2016-01-07T01:45:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-07</time>
-</a>
-        
-<!--卜算子统计阅读量-->
-	
-      </header>
-    
- 
-
-<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>v$mystat视图中只会有当前用户的会话信息</p>
-<p>v$sesstat会有整个实例内所有会话信息。因此在v$sesstat中自然包括v&amp;mystat的统计信息。</p>
-</li>
-</ol>
-<p>   两个视图结构一致，只是统计数据不一致。</p>
-<pre><code>**下面是两个视图字段说明：**
-</code></pre><blockquote>
-<pre><code>SID表示会话编号，与v$session中SID相对应。
-STATISTIC#  表示统计项
-VALUE       表示统计项相关的值
-</code></pre></blockquote>
-<p>2.一般情况下v$mystat,v$sesstat会与v$statname一起配合使用。</p>
-<blockquote>
-<pre><code>sql&gt; desc v$statname;
-    Name       Type         Nullable Default Comments
-    ---------- ------------ -------- ------- --------
-    STATISTIC# NUMBER       Y                        
-    NAME       VARCHAR2(64) Y                        
-    CLASS      NUMBER       Y      
-</code></pre></blockquote>
-<p>STATISTIC#视图中STATISTIC#与v$mystat,v$sesstat中STATISTIC#字段是相关联的。</p>
-<p>NAME则是对应的英文信息，比如说要查某条DML语句所产生的redo信息。可以这样写:</p>
-<blockquote>
-<pre><code>select value from v$mystat t,v$statname t1 where t.STATISTIC# = t1.STATISTIC# and t1.NAME = &apos;redo size&apos;
-</code></pre></blockquote>
-<p>其它信息也是如此，只需将t1.name换成相对应的英文名称即可</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">v$sesstat v$mystat</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Oracle//" class="article-tag-list-link color2">Oracle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/01/07/Oracle-统计信息.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1644,27 +1672,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OAuth application</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">chrome google</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1676,7 +1688,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">xml Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1684,7 +1696,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color1">xml Oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">chrome google</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1696,7 +1712,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jrebel idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ocr 文字识别</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OAuth application</a>
               </li>
             
             <div class="clearfix"></div>

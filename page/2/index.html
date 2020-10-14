@@ -159,6 +159,126 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Oracle-统计信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/07/Oracle-统计信息.html">Oracle 统计信息</a>
+    </h1>
+  
+
+        
+        <a href="/2016/01/07/Oracle-统计信息.html" class="archive-article-date">
+  	<time datetime="2016-01-07T01:45:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-07</time>
+</a>
+        
+<!--卜算子统计阅读量-->
+	
+      </header>
+    
+ 
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>v$mystat视图中只会有当前用户的会话信息</p>
+<p>v$sesstat会有整个实例内所有会话信息。因此在v$sesstat中自然包括v&amp;mystat的统计信息。</p>
+</li>
+</ol>
+<p>   两个视图结构一致，只是统计数据不一致。</p>
+<pre><code>**下面是两个视图字段说明：**
+</code></pre><blockquote>
+<pre><code>SID表示会话编号，与v$session中SID相对应。
+STATISTIC#  表示统计项
+VALUE       表示统计项相关的值
+</code></pre></blockquote>
+<p>2.一般情况下v$mystat,v$sesstat会与v$statname一起配合使用。</p>
+<blockquote>
+<pre><code>sql&gt; desc v$statname;
+    Name       Type         Nullable Default Comments
+    ---------- ------------ -------- ------- --------
+    STATISTIC# NUMBER       Y                        
+    NAME       VARCHAR2(64) Y                        
+    CLASS      NUMBER       Y      
+</code></pre></blockquote>
+<p>STATISTIC#视图中STATISTIC#与v$mystat,v$sesstat中STATISTIC#字段是相关联的。</p>
+<p>NAME则是对应的英文信息，比如说要查某条DML语句所产生的redo信息。可以这样写:</p>
+<blockquote>
+<pre><code>select value from v$mystat t,v$statname t1 where t.STATISTIC# = t1.STATISTIC# and t1.NAME = &apos;redo size&apos;
+</code></pre></blockquote>
+<p>其它信息也是如此，只需将t1.name换成相对应的英文名称即可</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">v$sesstat v$mystat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Oracle//" class="article-tag-list-link color2">Oracle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/01/07/Oracle-统计信息.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Oracle-wm-concat和pivot用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -705,27 +825,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OAuth application</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">chrome google</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -737,7 +841,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">xml Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -745,7 +849,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color1">xml Oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">chrome google</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -757,7 +865,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jrebel idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ocr 文字识别</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OAuth application</a>
               </li>
             
             <div class="clearfix"></div>
