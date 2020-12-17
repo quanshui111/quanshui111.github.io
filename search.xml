@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[md 简单使用]]></title>
+    <url>%2F2020%2F12%2F16%2Fmd-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.html</url>
+    <content type="text"><![CDATA[标题文本作为 标题 ctrl +1,2,3.. 标注 重点标注 快捷键； 标注的标题为ctrl+2 shift + &gt; 注意，这里标注重要内容 代码块··· 3个 回车 ，可以选择语言 。 1234public void setname(String name )&#123; &#125; 列表 列表 ctrl + shift +] 列表2 有序列表ctrl+shift +[ 列表2]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>md</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git 初学]]></title>
+    <url>%2F2020%2F12%2F16%2Fgit-%E5%88%9D%E5%AD%A6.html</url>
+    <content type="text"><![CDATA[目标初步了解git ，并可以在idea中使用 分布式版本控制每个用户本地存储版本历史]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F10%2F14%2FOcr%E8%AF%86%E5%88%AB.html</url>
+    <content type="text"><![CDATA[toc: truetitle: Ocr识别date: 2020-09-27 09:35:03categories: “人工智能”tags: [ocr 文字识别] 基本上使用 腾讯 百度 阿里 这几家 腾讯腾讯AI开放平台 地址1https://ai.qq.com/product/visionimgidy.shtml#fuzzy 注册并创建应用 输入些注册信息 最后得到一个AppID 和Apikey. 给应用添加接入功能选择能力库 ，再里边进行选择给应用加入的功能； 选择加入的应用 ； 首页就可以看到接入的能力了 。具体怎么用 查看文档 ； 好像缺少票据的识别， 没找到 。 百度开放平台地址1https://ai.baidu.com/ 能力接入 看着挺多。 增值税发票收费情况 登陆 接口使用概述 创建应用 文字识别 里边的是默认勾选的。 完成之后 得到 appid ，apikey ，跟腾讯一样 调用 随便找一张发票图片 ； 复制官网代码 1234567891011121314151617181920212223242526 public static String vatInvoice() &#123; // 请求url String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/vat_invoice"; try &#123; // 本地文件路径 String filePath = "D:/Downloads/1.png"; byte[] imgData = FileUtil.readFileByBytes(filePath); String imgStr = Base64Util.encode(imgData); String imgParam = URLEncoder.encode(imgStr, "UTF-8"); String param = "image=" + imgParam; String accessToken = AuthService.getAuth(); String result = HttpUtil.post(url, accessToken, param); System.out.println(result); return result; &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; return null; &#125;public static void main(String[] args) &#123; OcrTest.vatInvoice();&#125; 运行结果 API和SDK文档访问地址 https://cloud.baidu.com/doc/OCR/s/Ek3h7xypm 可以自行查看如何调用。 如图： 阿里OCR 市场 https://market.aliyun.com/aliyunocrnew 发票相关 调用API https://market.aliyun.com/products/57124001/cmapi027758.html?spm=5176.182739.954606.1.69111d8aDU5qtS#sku=yuncode2175800000 总结基本上使用ocr 都差不多。 有以下步骤 注册账号 注册应用 下载sdk 按实例代码调用]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[文字识别Ocr]]></title>
     <url>%2F2020%2F10%2F14%2F%E6%96%87%E5%AD%97%E8%AF%86%E5%88%ABOcr.html</url>
     <content type="text"><![CDATA[基本上使用 腾讯 百度 阿里 这几家 腾讯腾讯AI开放平台 地址1https://ai.qq.com/product/visionimgidy.shtml#fuzzy 注册并创建应用 输入些注册信息 最后得到一个AppID 和Apikey. 给应用添加接入功能选择能力库 ，再里边进行选择给应用加入的功能； 选择加入的应用 ； 首页就可以看到接入的能力了 。具体怎么用 查看文档 ； 好像缺少票据的识别， 没找到 。 百度开放平台地址1https://ai.baidu.com/ 能力接入 看着挺多。 增值税发票收费情况 登陆 接口使用概述 创建应用 文字识别 里边的是默认勾选的。 完成之后 得到 appid ，apikey ，跟腾讯一样 调用 随便找一张发票图片 ； 复制官网代码 1234567891011121314151617181920212223242526 public static String vatInvoice() &#123; // 请求url String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/vat_invoice"; try &#123; // 本地文件路径 String filePath = "D:/Downloads/1.png"; byte[] imgData = FileUtil.readFileByBytes(filePath); String imgStr = Base64Util.encode(imgData); String imgParam = URLEncoder.encode(imgStr, "UTF-8"); String param = "image=" + imgParam; String accessToken = AuthService.getAuth(); String result = HttpUtil.post(url, accessToken, param); System.out.println(result); return result; &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; return null; &#125;public static void main(String[] args) &#123; OcrTest.vatInvoice();&#125; 运行结果 API和SDK文档访问地址 https://cloud.baidu.com/doc/OCR/s/Ek3h7xypm 可以自行查看如何调用。 如图： 阿里OCR 市场 https://market.aliyun.com/aliyunocrnew 发票相关 调用API https://market.aliyun.com/products/57124001/cmapi027758.html?spm=5176.182739.954606.1.69111d8aDU5qtS#sku=yuncode2175800000 总结基本上使用ocr 都差不多。 有以下步骤 注册账号 注册应用 下载sdk 按实例代码调用]]></content>
@@ -30,7 +57,7 @@
   <entry>
     <title><![CDATA[dubbo 初学]]></title>
     <url>%2F2020%2F09%2F29%2Fdubbo-%E5%88%9D%E5%AD%A6.html</url>
-    <content type="text"><![CDATA[rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。 数据远程传输 对象的序列化 和反序列化 解决的核心问题 ： 通信 和 序列化 dubbo 开源 java RPC 框架 远程方法调用 负载均衡 服务注册 服务发现 图示理解下 ： 蓝虚线 异步 注册中心dubbo 推荐]]></content>
+    <content type="text"><![CDATA[rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。 数据远程传输 对象的序列化 和反序列化 解决的核心问题 ： 通信 和 序列化 dubbo 功能介绍官网 http://dubbo.apache.org/zh-cn/docs/user/quick-start.html 功能 开源 java RPC 框架 远程方法调用 负载均衡 服务注册 ❤ 服务发现 ❤ 图示理解下 ： 蓝虚线 异步 ₩ 框架可以在 应用启动时，根据配置文件（消费者/提供者名字 、注册中心地址、服务等） 自动注册/发现服务； 注册中心dubbo 推荐的注册中心有下面一些 开发步骤]]></content>
       <tags>
         <tag>dubbo</tag>
       </tags>
@@ -62,7 +89,7 @@
         <category>工具</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>hexo git github</tag>
       </tags>
   </entry>
   <entry>

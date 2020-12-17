@@ -8,20 +8,21 @@
   <link rel="dns-prefetch" href="https://www.catM.top">
   <title>dubbo 初学 | 风雪夜归人</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。  数据远程传输  对象的序列化 和反序列化   解决的核心问题 ： 通信 和 序列化  dubbo 开源 java  RPC 框架  远程方法调用 负载均衡 服务注册  服务发现   图示理解下 ： 蓝虚线 异步  注册中心dubbo 推荐">
+  <meta name="description" content="rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。  数据远程传输  对象的序列化 和反序列化   解决的核心问题 ： 通信 和 序列化  dubbo 功能介绍官网   http://dubbo.apache.org/zh-cn/docs/user/quick-start.html  功能  开源 java  RPC 框架  远程方法调用 负载均衡 服务注册 ❤ 服务发现 ❤">
 <meta name="keywords" content="dubbo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dubbo 初学">
 <meta property="og:url" content="https://www.catM.top/2020/09/29/dubbo-初学.html">
 <meta property="og:site_name" content="风雪夜归人">
-<meta property="og:description" content="rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。  数据远程传输  对象的序列化 和反序列化   解决的核心问题 ： 通信 和 序列化  dubbo 开源 java  RPC 框架  远程方法调用 负载均衡 服务注册  服务发现   图示理解下 ： 蓝虚线 异步  注册中心dubbo 推荐">
+<meta property="og:description" content="rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。  数据远程传输  对象的序列化 和反序列化   解决的核心问题 ： 通信 和 序列化  dubbo 功能介绍官网   http://dubbo.apache.org/zh-cn/docs/user/quick-start.html  功能  开源 java  RPC 框架  远程方法调用 负载均衡 服务注册 ❤ 服务发现 ❤">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.catm.top/2020/09/29/dubbo-初学/image-20200929101914290.png">
 <meta property="og:image" content="https://www.catm.top/2020/09/29/dubbo-初学/image-20200929104300544.png">
-<meta property="og:updated_time" content="2020-09-29T02:43:13.146Z">
+<meta property="og:image" content="https://www.catm.top/2020/09/29/dubbo-初学/image-20201015175913132.png">
+<meta property="og:updated_time" content="2020-10-15T09:59:36.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dubbo 初学">
-<meta name="twitter:description" content="rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。  数据远程传输  对象的序列化 和反序列化   解决的核心问题 ： 通信 和 序列化  dubbo 开源 java  RPC 框架  远程方法调用 负载均衡 服务注册  服务发现   图示理解下 ： 蓝虚线 异步  注册中心dubbo 推荐">
+<meta name="twitter:description" content="rpc 概念 远程过程调用，两个不同进程 或者机器 ，直接方法调用 。  数据远程传输  对象的序列化 和反序列化   解决的核心问题 ： 通信 和 序列化  dubbo 功能介绍官网   http://dubbo.apache.org/zh-cn/docs/user/quick-start.html  功能  开源 java  RPC 框架  远程方法调用 负载均衡 服务注册 ❤ 服务发现 ❤">
 <meta name="twitter:image" content="https://www.catm.top/2020/09/29/dubbo-初学/image-20200929101914290.png">
   
     <link rel="alternative" href="/atom.xml" title="风雪夜归人" type="application/atom+xml">
@@ -197,7 +198,7 @@
 	<div id="toc-article" class="toc-article">
 	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rpc-概念"><span class="toc-number">1.</span> <span class="toc-text">rpc 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dubbo"><span class="toc-number">2.</span> <span class="toc-text">dubbo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册中心"><span class="toc-number">3.</span> <span class="toc-text">注册中心</span></a></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rpc-概念"><span class="toc-number">1.</span> <span class="toc-text">rpc 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dubbo-功能介绍"><span class="toc-number">2.</span> <span class="toc-text">dubbo 功能介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册中心"><span class="toc-number">3.</span> <span class="toc-text">注册中心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发步骤"><span class="toc-number">4.</span> <span class="toc-text">开发步骤</span></a></li></ol>
          </div>
    <script type="text/javascript">
 	function showToc(){
@@ -227,18 +228,25 @@
 <li>对象的序列化 和反序列化 </li>
 </ul>
 <p>解决的核心问题 ： 通信 和 序列化 </p>
-<h2 id="dubbo"><a href="#dubbo" class="headerlink" title="dubbo"></a>dubbo</h2><ul>
+<h2 id="dubbo-功能介绍"><a href="#dubbo-功能介绍" class="headerlink" title="dubbo 功能介绍"></a>dubbo 功能介绍</h2><p>官网 </p>
+<blockquote>
+<p><a href="http://dubbo.apache.org/zh-cn/docs/user/quick-start.html" target="_blank" rel="noopener">http://dubbo.apache.org/zh-cn/docs/user/quick-start.html</a></p>
+</blockquote>
+<p>功能</p>
+<ul>
 <li>开源 java  RPC 框架 </li>
 <li>远程方法调用</li>
 <li>负载均衡</li>
-<li>服务注册 </li>
-<li>服务发现 </li>
+<li>服务注册 <strong>❤</strong></li>
+<li>服务发现 <strong>❤</strong></li>
 </ul>
 <p>图示理解下 ：</p>
 <p>蓝虚线 异步</p>
 <p><img src="/2020/09/29/dubbo-初学/image-20200929101914290.png" alt="image-20200929101914290"></p>
-<h2 id="注册中心"><a href="#注册中心" class="headerlink" title="注册中心"></a>注册中心</h2><p>dubbo 推荐</p>
+<p><strong>₩</strong> <strong>框架可以在 应用启动时，根据配置文件（消费者/提供者名字 、注册中心地址、服务等） 自动注册/发现服务；</strong></p>
+<h2 id="注册中心"><a href="#注册中心" class="headerlink" title="注册中心"></a>注册中心</h2><p>dubbo 推荐的注册中心有下面一些</p>
 <p><img src="/2020/09/29/dubbo-初学/image-20200929104300544.png" alt="image-20200929104300544"></p>
+<h2 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h2><p><img src="/2020/09/29/dubbo-初学/image-20201015175913132.png" alt="image-20201015175913132"></p>
 
       
 
@@ -381,7 +389,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rpc-概念"><span class="toc-number">1.</span> <span class="toc-text">rpc 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dubbo"><span class="toc-number">2.</span> <span class="toc-text">dubbo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册中心"><span class="toc-number">3.</span> <span class="toc-text">注册中心</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rpc-概念"><span class="toc-number">1.</span> <span class="toc-text">rpc 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dubbo-功能介绍"><span class="toc-number">2.</span> <span class="toc-text">dubbo 功能介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册中心"><span class="toc-number">3.</span> <span class="toc-text">注册中心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发步骤"><span class="toc-number">4.</span> <span class="toc-text">开发步骤</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -520,11 +528,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OAuth application</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,11 +552,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
+                <a href="javascript:void(0)" class="js-tag color4">v$sesstat v$mystat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">v$sesstat v$mystat</a>
+                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -556,6 +572,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -568,15 +588,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">md</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ocr 文字识别</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OAuth application</a>
+                <a href="javascript:void(0)" class="js-tag color1">hexo git github</a>
               </li>
             
             <div class="clearfix"></div>
