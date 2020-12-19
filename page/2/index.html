@@ -159,6 +159,344 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo-设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/27/hexo-设置.html">hexo 设置</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/27/hexo-设置.html" class="archive-article-date">
+  	<time datetime="2020-09-27T03:34:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
+</a>
+        
+<!--卜算子统计阅读量-->
+	
+      </header>
+    
+ 
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文章显示图片"><a href="#文章显示图片" class="headerlink" title="文章显示图片"></a>文章显示图片</h1><p> 文章发布之后，图片不显示 需要设置下 </p>
+<ul>
+<li><p>安装个插件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cnpm install hexo-asset-image --save</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改下主站设置 _config.yml</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: false 改成 ture</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重新生成 启动</li>
+</ul>
+<p>源文件目录</p>
+<p> <img src="/2020/09/27/hexo-设置/image-20200927143740759.png" alt="image-20200927143740759"></p>
+<h1 id="文章显示目录"><a href="#文章显示目录" class="headerlink" title="文章显示目录"></a>文章显示目录</h1><p>参考文章</p>
+<blockquote>
+<p><a href="https://www.dazhuanlan.com/2019/09/29/5d9048a24e37b/" target="_blank" rel="noopener">https://www.dazhuanlan.com/2019/09/29/5d9048a24e37b/</a></p>
+</blockquote>
+<ul>
+<li><p>修改css ： themes/yilia/source/main.234bc0.css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span> <span class="selector-class">.show-toc-btn</span>,<span class="selector-id">#container</span> <span class="selector-class">.toc-article</span>&#123;<span class="attribute">display</span>:block&#125;</span><br><span class="line"><span class="selector-class">.toc-article</span>&#123;<span class="attribute">z-index</span>:<span class="number">100</span>;<span class="attribute">background</span>:<span class="number">#fff</span>;<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ccc</span>;<span class="attribute">max-width</span>:<span class="number">250px</span>;<span class="attribute">min-width</span>:<span class="number">150px</span>;<span class="attribute">max-height</span>:<span class="number">500px</span>;<span class="attribute">overflow-y</span>:auto;<span class="attribute">-webkit-box-shadow</span>:<span class="number">5px</span> <span class="number">5px</span> <span class="number">2px</span> <span class="number">#ccc</span>;<span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">5px</span> <span class="number">2px</span> <span class="number">#ccc</span>;<span class="attribute">font-size</span>:<span class="number">12px</span>;<span class="attribute">padding</span>:<span class="number">10px</span>;<span class="attribute">position</span>:fixed;<span class="attribute">right</span>:<span class="number">35px</span>;<span class="attribute">top</span>:<span class="number">129px</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc-close</span>&#123;<span class="attribute">font-weight</span>:<span class="number">700</span>;<span class="attribute">font-size</span>:<span class="number">20px</span>;<span class="attribute">cursor</span>:pointer;<span class="attribute">float</span>:right;<span class="attribute">color</span>:<span class="number">#ccc</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc-close</span><span class="selector-pseudo">:hover</span>&#123;<span class="attribute">color</span>:<span class="number">#000</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;<span class="attribute">padding</span>:<span class="number">0</span>;<span class="attribute">line-height</span>:<span class="number">20px</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc</span> <span class="selector-class">.toc-number</span>&#123;<span class="attribute">color</span>:<span class="number">#333</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc</span> <span class="selector-class">.toc-text</span><span class="selector-pseudo">:hover</span>&#123;<span class="attribute">text-decoration</span>:underline;<span class="attribute">color</span>:<span class="number">#2a6496</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-tag">li</span>&#123;<span class="attribute">list-style-type</span>:none&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc-level-1</span>&#123;<span class="attribute">margin</span>:<span class="number">4px</span> <span class="number">0</span>&#125;<span class="selector-class">.toc-article</span> <span class="selector-class">.toc-child</span>&#123;&#125;@-<span class="keyword">moz</span>-<span class="keyword">keyframes</span> cd-bounce-<span class="number">1</span>&#123;0%&#123;<span class="attribute">opacity</span>:<span class="number">0</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;60%&#123;<span class="attribute">opacity</span>:<span class="number">1</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1.01)&#125;100%&#123;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;&#125;@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> cd-bounce-<span class="number">1</span>&#123;0%&#123;<span class="attribute">opacity</span>:<span class="number">0</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;60%&#123;<span class="attribute">opacity</span>:<span class="number">1</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1.01)&#125;100%&#123;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;&#125;@-<span class="keyword">o</span>-<span class="keyword">keyframes</span> cd-bounce-<span class="number">1</span>&#123;0%&#123;<span class="attribute">opacity</span>:<span class="number">0</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;60%&#123;<span class="attribute">opacity</span>:<span class="number">1</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1.01)&#125;100%&#123;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;&#125;@<span class="keyword">keyframes</span> cd-bounce-<span class="number">1</span>&#123;0%&#123;<span class="attribute">opacity</span>:<span class="number">0</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;60%&#123;<span class="attribute">opacity</span>:<span class="number">1</span>;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1.01);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1.01)&#125;100%&#123;<span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(1);<span class="attribute">transform</span>:<span class="built_in">scale</span>(1)&#125;&#125;<span class="selector-class">.show-toc-btn</span>&#123;<span class="attribute">display</span>:none;<span class="attribute">z-index</span>:<span class="number">10</span>;<span class="attribute">width</span>:<span class="number">30px</span>;<span class="attribute">min-height</span>:<span class="number">14px</span>;<span class="attribute">overflow</span>:hidden;<span class="attribute">padding</span>:<span class="number">4px</span> <span class="number">6px</span> <span class="number">8px</span> <span class="number">5px</span>;<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ddd</span>;<span class="attribute">border-right</span>:none;<span class="attribute">position</span>:fixed;<span class="attribute">right</span>:<span class="number">40px</span>;<span class="attribute">text-align</span>:center;<span class="attribute">background-color</span>:<span class="number">#f9f9f9</span>&#125;<span class="selector-class">.show-toc-btn</span> <span class="selector-class">.btn-bg</span>&#123;<span class="attribute">margin-top</span>:<span class="number">2px</span>;<span class="attribute">display</span>:block;<span class="attribute">width</span>:<span class="number">16px</span>;<span class="attribute">height</span>:<span class="number">14px</span>;<span class="attribute">background</span>:<span class="built_in">url</span>(http://7xtawy.com1.z0.glb.clouddn.com/show.png) no-repeat;<span class="attribute">-webkit-background-size</span>:<span class="number">100%</span>;<span class="attribute">-moz-background-size</span>:<span class="number">100%</span>;<span class="attribute">background-size</span>:<span class="number">100%</span>&#125;<span class="selector-class">.show-toc-btn</span> <span class="selector-class">.btn-text</span>&#123;<span class="attribute">color</span>:<span class="number">#999</span>;<span class="attribute">font-size</span>:<span class="number">12px</span>&#125;<span class="selector-class">.show-toc-btn</span><span class="selector-pseudo">:hover</span>&#123;<span class="attribute">cursor</span>:pointer&#125;<span class="selector-class">.show-toc-btn</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.btn-bg</span>&#123;<span class="attribute">background-position</span>:<span class="number">0</span> -<span class="number">16px</span>&#125;<span class="selector-class">.show-toc-btn</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.btn-text</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;<span class="attribute">color</span>:<span class="number">#ea8010</span>&#125;</span><br><span class="line"><span class="selector-class">.toc-article</span> <span class="selector-tag">li</span> <span class="selector-tag">ol</span>, <span class="selector-class">.toc-article</span> <span class="selector-tag">li</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.toc-article</span> <span class="selector-tag">ol</span>, <span class="selector-class">.toc-article</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改ejs:  themes/yilia/layout/_partial/article.ejs </p>
+</li>
+</ul>
+<p>​         在 <code>&lt;/header&gt; &lt;% } %&gt;</code> 下面加入 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 目录内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.toc</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"show-toc-btn"</span> <span class="attr">id</span>=<span class="string">"show-toc-btn"</span> <span class="attr">onclick</span>=<span class="string">"showToc();"</span> <span class="attr">style</span>=<span class="string">"display:none"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"btn-bg"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"btn-text"</span>&gt;</span>文章导航<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"toc-article"</span> <span class="attr">class</span>=<span class="string">"toc-article"</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"toc-close"</span> <span class="attr">class</span>=<span class="string">"toc-close"</span> <span class="attr">title</span>=<span class="string">"隐藏导航"</span> <span class="attr">onclick</span>=<span class="string">"showBtn();"</span>&gt;</span>×<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">strong</span> <span class="attr">class</span>=<span class="string">"toc-title"</span>&gt;</span>文章目录<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">%-</span> <span class="attr">toc</span>(<span class="attr">post.content</span>) %&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">	<span class="function"><span class="keyword">function</span> <span class="title">showToc</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> toc_article = <span class="built_in">document</span>.getElementById(<span class="string">"toc-article"</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> show_toc_btn = <span class="built_in">document</span>.getElementById(<span class="string">"show-toc-btn"</span>);</span></span><br><span class="line"><span class="actionscript">		toc_article.setAttribute(<span class="string">"style"</span>,<span class="string">"display:block"</span>);</span></span><br><span class="line"><span class="actionscript">		show_toc_btn.setAttribute(<span class="string">"style"</span>,<span class="string">"display:none"</span>);</span></span><br><span class="line"><span class="undefined">		&#125;;</span></span><br><span class="line"><span class="actionscript">	<span class="function"><span class="keyword">function</span> <span class="title">showBtn</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> toc_article = <span class="built_in">document</span>.getElementById(<span class="string">"toc-article"</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> show_toc_btn = <span class="built_in">document</span>.getElementById(<span class="string">"show-toc-btn"</span>);</span></span><br><span class="line"><span class="actionscript">		toc_article.setAttribute(<span class="string">"style"</span>,<span class="string">"display:none"</span>);</span></span><br><span class="line"><span class="actionscript">		show_toc_btn.setAttribute(<span class="string">"style"</span>,<span class="string">"display:block"</span>);</span></span><br><span class="line"><span class="undefined">		&#125;;</span></span><br><span class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 目录内容结束 --&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>文章增加 toc: true</p>
+</li>
+<li><p>效果</p>
+<p><img src="/2020/09/27/hexo-设置/image-20200927174244519.png" alt="image-20200927174244519"></p>
+</li>
+</ul>
+<h1 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h1><p>比如上面文章增加 toc: true  需要每个文章都增加，所有可以直接修改模板。</p>
+<p>我改的是这里 : scaffolds\post.md</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">toc: true</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+<h1 id="访问量"><a href="#访问量" class="headerlink" title="访问量"></a>访问量</h1><p>参考文章</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/fmk1023/article/details/100068449?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>增加卜算子  </p>
+<p>位置  : themes/yilia/layout/_partial/footer.ejs</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>站点访问次数</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--找个合适的位置放上，我还是放上面文件--&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span> </span><br><span class="line">	  本站访客数<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文章阅读量</p>
+<p>位置 themes/yilia/layout/_partial/article.ejs </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> ( !<span class="attr">index</span> )&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"archive-article-date"</span>&gt;</span></span><br><span class="line">        阅读量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h1><p>参考文章： </p>
+<blockquote>
+<p><a href="https://segmentfault.com/a/1190000020260103?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000020260103?utm_source=tag-newest</a></p>
+</blockquote>
+<p>使用gitalk </p>
+<ul>
+<li><p>注册github  OAuth  app </p>
+<p>setting - &gt; develper setting -  &gt;OAuth Apps</p>
+<p>将会得到id 和secert 。后边用的上；</p>
+</li>
+<li><p>主题配置修改</p>
+<p>_config.yml 增加 下面配置 ,这里是yilia 主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gitalk: </span><br><span class="line">  enable: true</span><br><span class="line">  gitalk_clientID: &apos;上面的 id&apos;</span><br><span class="line">  gitalk_Secret: &apos;上面的sercert &apos;</span><br><span class="line">  gitalk_repo: &apos;博客地址&apos;</span><br><span class="line">  gitalk_owner: &apos;github 用户名&apos;</span><br><span class="line">  gitalk_admin: &apos;github 用户名&apos;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>增加ejs</p>
+<p>在themes/yilia/layout/_partial/post目录下  新建一个 gitalk.ejs </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> </p>
+<p><script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script> </p>
+<p><div id="gitalk-container"></div>     </p>
+<p><script type="text/javascript"><br>    var gitalk = new Gitalk({<br>    // gitalk的主要参数<br>      clientID: ‘&lt;%=theme.gitalk.gitalk_clientID%&gt;’,<br>      clientSecret: ‘&lt;%=theme.gitalk.gitalk_Secret%&gt;’,<br>      repo: ‘&lt;%=theme.gitalk.gitalk_repo%&gt;’,<br>      owner: ‘&lt;%=theme.gitalk.gitalk_owner%&gt;’,   //你的GitHub用户名字<br>      admin: [‘&lt;%=theme.gitalk.gitalk_admin%&gt;’],  //你的GitHub用户的名字<br>      id: md5(window.location.pathname), //id不能重复，如果重复就会把其他页面的评论引进来<br>      distractionFreeMode: &lt;%=theme.gitalk.distractionFreeMode%&gt;<br>        });<br>      gitalk.render(‘gitalk-container’);<br></script><br>  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 修改scss </span><br><span class="line"></span><br><span class="line">   在 themes\yilia\source-src\css\comment<span class="selector-class">.scss</span> 中增加 #gitalk-container</span><br><span class="line"></span><br><span class="line">  ``` scss</span><br><span class="line">  <span class="selector-id">#disqus_thread</span>, <span class="selector-class">.duoshuo</span>, <span class="selector-class">.cloud-tie-wrapper</span>, <span class="selector-id">#SOHUCS</span>, <span class="selector-id">#gitment-ctn</span>, <span class="selector-id">#gitalk-container</span> &#123;</span><br><span class="line">  	<span class="attribute">padding</span>: <span class="number">0</span> <span class="number">30px</span> !important;</span><br><span class="line">  	<span class="attribute">min-height</span>: <span class="number">20px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>修改article .ejs</p>
+<p>在themes/yilia/layout/_partial/下增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.gitalk.enable)&#123; %&gt;</span><br><span class="line">    &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;%- include post/gitalk.ejs %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="username-github-io无法访问"><a href="#username-github-io无法访问" class="headerlink" title="username.github.io无法访问"></a>username.github.io无法访问</h1><p>参考文章</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/q764424567/article/details/108204240" target="_blank" rel="noopener">https://blog.csdn.net/q764424567/article/details/108204240</a></p>
+</blockquote>
+<p>正如博客中所说 ，自己ping 发现 username .github.io  的ip 是 127.0.0.1 </p>
+<p>所以自己得映射 域名 到真实的ip/ </p>
+<p>查找真实ip ,配置到host文件 </p>
+<blockquote>
+<p><a href="https://www.ipaddress.com/" target="_blank" rel="noopener">https://www.ipaddress.com/</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">185.199.108.153  quanshui111.github.io</span><br></pre></td></tr></table></figure>
+<p>完了之后 重新生成发布 /</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/工具//" class="article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/27/hexo-设置.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hexo文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/27/hexo文档.html">hexo 使用</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/27/hexo文档.html" class="archive-article-date">
+  	<time datetime="2020-09-27T01:35:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
+</a>
+        
+<!--卜算子统计阅读量-->
+	
+      </header>
+    
+ 
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装node和npm"><a href="#安装node和npm" class="headerlink" title="安装node和npm"></a>安装node和npm</h2><ul>
+<li>node 下载地址</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://nodejs.org/en/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>用12.18.4 的吧 ，14 版本的发布github 时报错。</p>
+</blockquote>
+<ul>
+<li>node  npm（包管理器）</li>
+</ul>
+<blockquote>
+<p>C:\Users\Administrator&gt;node -v<br>v12.18.4</p>
+<p>C:\Users\Administrator&gt;npm -v<br>6.14.6</p>
+</blockquote>
+<ul>
+<li><p><strong>node_global</strong> 和 <strong>node_cache</strong></p>
+<ul>
+<li>新建两个文件夹 ，存放全局安装的插件 （全局安装包  默认安装到 c盘  ） ； </li>
+</ul>
+<blockquote>
+<p>npm config set prefix “D:\nodejs\node_global”</p>
+<p>npm config set cache “D:\nodejs\node_cache”</p>
+</blockquote>
+<ul>
+<li>另外，将全局安装包位置设置成系统环境变量，方便使用全局安装的包；</li>
+</ul>
+<p><img src="/2020/09/27/hexo文档/image-20200924181104370.png" alt="image-20200924181104370"></p>
+</li>
+</ul>
+<p>  全局安装了hexo  和  cnpm  ；这样命令行 可以直接使用 hexo  和 cnpm 命令了 </p>
+<p>  <img src="/2020/09/27/hexo文档/image-20200924180732371.png" alt="image-20200924180732371"></p>
+<h2 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h2><p>命令</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>cnpm 安装与否 跟hexo  没有关系  ，只是下载包会快；  ，淘宝出品</p>
+</blockquote>
+<p>安装完了，以后用cnpm安装其他 包,查看下版本信息</p>
+<blockquote>
+<p>cnpm -v<br><a href="mailto:cnpm@6.1.1" target="_blank" rel="noopener">cnpm@6.1.1</a> (D:\nodejs\node_global\node_modules\cnpm\lib\parse_argv.js)<br><a href="mailto:npm@6.14.8" target="_blank" rel="noopener">npm@6.14.8</a> (D:\nodejs\node_global\node_modules\cnpm\node_modules\npm\lib\npm.js)<br><a href="mailto:node@14.11.0" target="_blank" rel="noopener">node@14.11.0</a> (D:\nodejs\node.exe)<br><a href="mailto:npminstall@3.27.0" target="_blank" rel="noopener">npminstall@3.27.0</a> (D:\nodejs\node_global\node_modules\cnpm\node_modules\npminstall\lib\index.js)<br>prefix=D:\nodejs\node_global<br>win32 x64 10.0.18363<br>registry=<a href="https://r.npm.taobao.org" target="_blank" rel="noopener">https://r.npm.taobao.org</a></p>
+</blockquote>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><blockquote>
+<p>cnpm install -g hexo-cli</p>
+</blockquote>
+<h2 id="使用hexo初始化博客"><a href="#使用hexo初始化博客" class="headerlink" title="使用hexo初始化博客"></a>使用hexo初始化博客</h2><ul>
+<li><p>建个空文件夹 blog</p>
+</li>
+<li><p>hexo init  </p>
+<p>初始化一个博客  ，自动下载依赖和主题；</p>
+</li>
+</ul>
+<h2 id="启动博客"><a href="#启动博客" class="headerlink" title="启动博客"></a>启动博客</h2><p>hexo clean  清除 </p>
+<p> hexo g   生成静态文件</p>
+<p> hexo s   启动</p>
+        
+          <a class="article-more-a" href="/2020/09/27/hexo文档.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hexo git github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/工具//" class="article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/27/hexo文档.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Jquery跨域访问" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1331,11 +1669,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1347,11 +1685,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">v$sesstat v$mystat</a>
+                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">wm_concat pivot</a>
+                <a href="javascript:void(0)" class="js-tag color4">v$sesstat v$mystat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1367,11 +1705,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">hexo git github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1379,7 +1721,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jrebel idea</a>
+                <a href="javascript:void(0)" class="js-tag color4">idea git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1387,11 +1729,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jrebel idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ocr 文字识别</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hexo git github</a>
+                <a href="javascript:void(0)" class="js-tag color1">资料 资源</a>
               </li>
             
             <div class="clearfix"></div>
